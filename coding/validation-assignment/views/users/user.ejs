@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>upload file</title>
+  </head>
+  <style>
+    h1{
+            text-align: center;
+        }
+        #main .user{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            
+        }
+        #main{
+            margin: auto;
+           width: 50%;
+           border: 1px solid rgb(199, 204, 199);
+           padding: 10px;
+           
+        }
+        button{
+            margin-top: 10px;
+            background-color: rgb(96, 172, 96);
+            color: white;
+            font-weight: bolder;
+            font-size: 15px;
+            padding: 10px;
+            border: none;
+            width: 100%;
+          
+        }
+        input{
+            border: 1px solid rgb(199, 189, 189);
+            margin-top: 5px;
+            height: 25px;
+            border-radius: 2px;
+        }
+  
+    .error {
+      display: none;
+    }
+    .hidden {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+    p{
+      margin-bottom: 0;
+      font-size: 13px;
+      color: red;
+    }
+  </style>
+  <body>
+    
+    <h1>Register Here</h1>
+    <div id="main">
+    <form action="/users/form" method="POST">
+      <div class="user">
+        <label>First Name</label>
+        <input type="text" name="first_name" placeholder="First Name" required/>
+      </div>
+      <div class="user">
+        <label>Last Name</label>
+        <input type="text" name="last_name" placeholder="Last Name" required/>
+        
+      </div>
+     <div class="user">
+      <label >Email</label>
+      <input type="email" name="email" placeholder="Email" required/>
+      <p
+      
+      class='<%- JSON.stringify(errors.find((elem)=> elem.param === 'email')) ? "show" : 'hidden' %>'>
+      <%- JSON.stringify(errors.find((elem)=> elem.param === 'email') ? errors.find((elem)=> elem.param === 'email').msg : "") %></p>
+    
+     </div>
+     <div class="user">
+      <label>Gender</label>
+      <input type="text" name="gender" placeholder="Gender" required />
+      <p
+      
+      class='<%- JSON.stringify(errors.find((elem)=> elem.param === 'gender')) ? "show" : 'hidden' %>'>
+      <%- JSON.stringify(errors.find((elem)=> elem.param === 'gender') ? errors.find((elem)=> elem.param === 'gender').msg : "") %></p>
+     
+     </div>
+
+     <div class="user">
+      <label >Age</label>
+      <input type="number" name="age" placeholder="Age" required/>
+      <p
+      
+      class='<%- JSON.stringify(errors.find((elem)=> elem.param === 'age')) ? "show" : 'hidden' %>'>
+      <%- JSON.stringify(errors.find((elem)=> elem.param === 'age') ? errors.find((elem)=> elem.param === 'age').msg : "") %></p>
+
+     </div>
+     <div class="user">
+      <label>Pincode</label>
+      <input type="number" name="pincode" placeholder="Pincode" required/>
+      <p
+      
+      class='<%- JSON.stringify(errors.find((elem)=> elem.param === 'pincode')) ? "show" : 'hidden' %>'>
+      <%- JSON.stringify(errors.find((elem)=> elem.param === 'pincode') ? errors.find((elem)=> elem.param === 'pincode').msg : "") %></p>
+       </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  </body>
+  
+</html>
+
