@@ -1,0 +1,78 @@
+
+
+body{
+    background-color: black;
+}
+:root{
+    --mainColor:rgba(226, 226, 29, 0.993);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+text-align: center;
+}
+.todoList{
+    width: 50%;
+    background-color: var(--mainColor);
+    box-shadow: 0px 0px 10px white;
+    margin-top: 5em;
+    border-radius:0.5em;
+}
+h1{
+    font-size: 2rem;
+}
+input{
+    font-size: 1rem;
+    padding: 0.6em;
+    width: 80%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+}
+
+button{
+    font-size: 1rem;
+    padding: 0.6em 1em ;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    margin-left: 10px;
+}
+
+ol{
+    text-align: left;
+    width: 90%;
+    margin: 1em auto;
+}
+
+
+
+.addedItems{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+li,.fa-trash{
+  
+    font-size: 1.1rem;
+   
+    margin-top: 1em;
+}
+.fa-trash:hover{
+    color: red;
+   cursor: pointer;
+}
+
+.pending{
+    background-color: brown;
+   
+    border-radius: 5px;
+    
+    padding: 5px;
+    margin: 8px;
+}
+
